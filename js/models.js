@@ -197,3 +197,8 @@ class User {
     }
   }
 }
+
+async addFavorite(story) {
+  this.favorites.push(story);
+  await this._addOrRemoveFavorite("add", story)
+}
